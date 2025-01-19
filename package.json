@@ -2,26 +2,35 @@
   "name": "my-sanity-project",
   "private": true,
   "version": "1.0.0",
-  "main": "package.json",
+  "main": "server.js",
   "license": "UNLICENSED",
   "scripts": {
+    "type": "module",
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "migrate": "node scripts/ImportSanityData.mjs"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
+    "@sanity/client": "^6.25.0",
+    "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.70.0",
     "autoprefixer": "^10.4.20",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "next": "^15.1.5",
+    "next-sanity": "^9.8.38",
     "postcss": "^8.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": "^19.0.0",
     "sanity": "^3.70.0",
-    "styled-components": "^6.1.8",
+    "styled-components": "^6.1.14",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
